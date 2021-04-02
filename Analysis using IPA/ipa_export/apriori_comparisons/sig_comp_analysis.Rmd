@@ -1,0 +1,146 @@
+---
+title: "Analysing Comparisons of Interest"
+output:
+  html_document:
+    df_print: paged
+---
+
+
+```{r,echo=FALSE}
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(readxl)
+  library(EBImage)
+  library(knitr)
+})
+
+suppressWarnings({
+  sig_comp_z = readxl::read_excel("sig_comp_zscore.xlsx")
+  names(sig_comp_z) = c("canonical_pathways",
+                        "C1","C5","C7","C9","C12","C10","C15","C18","C19")
+  sig_comp_z = sig_comp_z %>%
+    mutate_at(c("C1","C5","C7",
+                "C9","C12","C15",
+                "C10","C18","C19"),as.numeric) %>%
+    mutate_at(c("C1","C5","C7",
+                "C9","C12","C15",
+                "C10","C18","C19"),round,3)
+  # sig_comp_z = apply(select(sig_comp_z,C1:C19),MARGIN = 2,
+  #                    FUN = function(x){round(as.numeric(x),3)}) %>%
+  #   as.data.frame() %>%
+  #   mutate(canonical_pathways = sig_comp_z$canonical_pathways) %>%
+  #   select(canonical_pathways,everything())
+  sig_comp_adj_pvalue = readxl::read_excel("sig_comp_adj_pvalue.xlsx")
+  names(sig_comp_adj_pvalue) = c("canonical_pathways",
+                                 "C1","C5","C7","C9","C12","C10","C15","C18","C19")
+  sig_comp_adj_pvalue = sig_comp_adj_pvalue %>%
+    mutate_at(c("C1","C5","C7",
+                "C9","C12","C15",
+                "C10","C18","C19"),as.numeric) %>%
+    mutate_at(c("C1","C5","C7",
+                "C9","C12","C15",
+                "C10","C18","C19"),round,3)
+  # sig_comp_adj_pvalue = apply(select(sig_comp_adj_pvalue,C1:C19),MARGIN = 2,
+  #                    FUN = function(x){round(as.numeric(x),3)}) %>%
+  #   as.data.frame() %>%
+  #   mutate(canonical_pathways = sig_comp_adj_pvalue$canonical_pathways) %>%
+  #   select(canonical_pathways,everything())
+})
+```
+
+**Study Design**
+
+
+General Study Design of all comparisons
+```{r,echo=FALSE}
+readImage("CDP_RNAseq_Design.png") %>% plot()
+
+```
+
+
+Baseline comparisons (without exercise)
+
+```{r,echo=FALSE}
+readImage("CDP_RNAseq_Interested_Comp2.png") %>% plot()
+```
+
+
+Second order comparisons (with exercise)
+
+```{r,echo=FALSE}
+readImage("CDP_RNAseq_Interested_Comp1.png") %>% plot()
+```
+
+```{r}
+sig_comp_z %>%
+  head() %>% kable()
+```
+
+```{r}
+sig_comp_adj_pvalue %>%
+  head() %>% kable()
+```
+
+**Second Order comparisons**
+
+```{r}
+secod = sig_comp_z %>%
+  select(canonical_pathways,C18,C19) %>%
+  mutate(HEMO_EXER_DIFF = C19-C18) %>%
+  na.omit() %>%
+  arrange(HEMO_EXER_DIFF)
+# write.csv(secod,file = "Second Order Comparisons.csv",quote = FALSE,row.names = FALSE)
+secod %>% 
+  arrange(desc(HEMO_EXER_DIFF)) %>%
+  head(2) %>%
+  kable()
+top_ranked_pathways = secod %>%
+  arrange(HEMO_EXER_DIFF) %>%
+  head(10)
+kable(top_ranked_pathways)
+```
+
+**First order baseline (fasting) comparisons**
+
+```{r}
+sig_comp_z %>%
+  select(canonical_pathways,C9,C12,C15) %>%
+  filter(!is.na(C9) | !is.na(C12) | !is.na(C15)) %>%
+  kable()
+```
+
+**First Order Hemodilution Exercise Comparison**
+
+```{r}
+sig_comp_z %>%
+  select(canonical_pathways,C1,C5,C7) %>%
+  filter(!is.na(C1)) %>%
+  arrange(desc(C1)) %>%
+  filter(C1>=qnorm(0.95)) %>%
+  kable()
+
+sig_comp_z %>%
+  select(canonical_pathways,C1,C5,C7) %>%
+  filter(!is.na(C1)) %>%
+  arrange(C1) %>%
+  filter(C1<=-qnorm(0.95)) %>%
+  kable()
+```
+
+```{r}
+apriori_pathways = sig_comp_z %>%
+  select(canonical_pathways,C1,C7,C18,C19) %>%
+  filter(canonical_pathways%in%secod$canonical_pathways) %>%
+  mutate(HEMO_EXER_DIFF = C19-C18) %>%
+  arrange(HEMO_EXER_DIFF) %>%
+  select(-HEMO_EXER_DIFF)
+kable(apriori_pathways)
+# write.csv(apriori_pathways,file = "Apriori Pathways.csv",quote = FALSE,row.names = FALSE)
+```
+
+
+
+
+
+
+

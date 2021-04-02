@@ -1,0 +1,387 @@
+Ingenuity Canonical Pathways, -log(p-value),zScore,Ratio,Molecules
+3-phosphoinositide Biosynthesis,-0,,0.0182,"DUSP16,EPHX2,PLPP7"
+Adrenomedullin signaling pathway,-0,,0.0152,"MAPK10,MAPK11,TTN"
+Amyotrophic Lateral Sclerosis Signaling,-0,,0.0103,CACNA1A
+Antiproliferative Role of Somatostatin Receptor 2,-0,,0.013,GNG2
+Apelin Endothelial Signaling Pathway,-0,,0.0174,"MAPK10,PRKCE"
+Aryl Hydrocarbon Receptor Signaling,-0,,0.00699,GSTO1
+Autophagy,-0,,0.0164,MAP1LC3B2
+B Cell Receptor Signaling,-0,,0.0162,"MAPK11,NFATC3,SYNJ2"
+BEX2 Signaling Pathway,-0,,0.0127,MAPK10
+Bladder Cancer Signaling,-0,,0.0103,CXCL8
+CD27 Signaling in Lymphocytes,-0,,0.0189,MAPK10
+Calcium-induced T Lymphocyte Apoptosis,-0,,0.0152,PRKCE
+Caveolar-mediated Endocytosis Signaling,-0,,0.0137,ITGB5
+Cell Cycle Control of Chromosomal Replication,-0,,0.0179,CDK3
+Cholecystokinin/Gastrin-mediated Signaling,-0,,0.0168,"MAPK10,PRKCE"
+Colorectal Cancer Metastasis Signaling,-0,,0.00791,"GNG2,MAPK10"
+Crosstalk between Dendritic Cells and Natural Killer Cells,-0,,0.0112,CD80
+D-myo-inositol-5-phosphate Metabolism,-0,,0.0192,"DUSP16,EPHX2,PLPP7"
+Dopamine Receptor Signaling,-0,,0.013,NCS1
+Dopamine-DARPP32 Feedback in cAMP Signaling,-0,,0.0123,"CACNA1A,PRKCE"
+EGF Signaling,-0,,0.0182,MAPK11
+ERK/MAPK Signaling,-0,,0.00518,PRKCE
+ERK5 Signaling,-0,,0.0139,NTRK1
+Endocannabinoid Cancer Inhibition Pathway,-0,,0.00699,CNR1
+Endometrial Cancer Signaling,-0,,0.0167,APC2
+Ephrin Receptor Signaling,-0,,0.0167,"GNAZ,GNG2,PDGFA"
+ErbB4 Signaling,-0,,0.0149,PRKCE
+Erythropoietin Signaling,-0,,0.0132,PRKCE
+FGF Signaling,-0,,0.0119,MAPK11
+GDNF Family Ligand-Receptor Interactions,-0,,0.0132,MAPK10
+Gap Junction Signaling,-0,,0.0152,"HTR2B,PRKCE,TUBA8"
+Germ Cell-Sertoli Cell Junction Signaling,-0,,0.0117,"MAPK10,TUBA8"
+Glioblastoma Multiforme Signaling,-0,,0.00606,PDGFA
+Glioma Signaling,-0,,0.0182,"PDGFA,PRKCE"
+HGF Signaling,-0,,0.018,"MAPK10,PRKCE"
+HOTAIR Regulatory Pathway,-0,,0.00625,LAMTOR5
+IL-15 Production,-0,,0.0165,"NTRK1,TNK2"
+IL-3 Signaling,-0,,0.0127,PRKCE
+IL-7 Signaling Pathway,-0,,0.0128,MAPK11
+Induction of Apoptosis by HIV1,-0,,0.0164,MAPK10
+Inhibition of ARE-Mediated mRNA Degradation Pathway,-0,,0.0164,"DDX6,MAPK11"
+LPS/IL-1 Mediated Inhibition of RXR Function,-0,,0.0134,"CETP,GSTO1,IL18RAP"
+Lymphotoxin ? Receptor Signaling,-0,,0.0189,RELB
+MSP-RON Signaling Pathway,-0,,0.0172,F12
+Melanocyte Development and Pigmentation Signaling,-0,,0.0106,SH2B2
+Mitotic Roles of Polo-Like Kinase,-0,,0.0152,PLK2
+Molecular Mechanisms of Cancer,-0,,0.0128,"CDK3,GNAZ,MAPK10,MAPK11,PRKCE"
+NF-?B Signaling,-0,,0.0112,"NTRK1,RELB"
+NGF Signaling,-0,,0.0175,"MAPK10,NTRK1"
+Necroptosis Signaling Pathway,-0,,0.0127,"IFNK,STAT2"
+Neuropathic Pain Signaling In Dorsal Horn Neurons,-0,,0.0198,"GRM2,PRKCE"
+Neurotrophin/TRK Signaling,-0,,0.0132,NTRK1
+Nur77 Signaling in T Lymphocytes,-0,,0.0169,CD80
+Osteoarthritis Pathway,-0,,0.00948,"CXCL8,IL18RAP"
+Oxidative Phosphorylation,-0,,0.0183,"MT-ATP6,MT-ND4"
+P2Y Purigenic Receptor Signaling Pathway,-0,,0.0157,"GNG2,PRKCE"
+PEDF Signaling,-0,,0.0122,MAPK11
+PI3K Signaling in B Lymphocytes,-0,,0.00725,NFATC3
+PI3K/AKT Signaling,-0,,0.0171,"EPM2A,IL18RAP,SYNJ2"
+PPAR Signaling,-0,,0.0192,"IL18RAP,PDGFA"
+PTEN Signaling,-0,,0.0159,"NTRK1,SYNJ2"
+Pancreatic Adenocarcinoma Signaling,-0,,0.0183,"GPLD1,MAPK10"
+Phagosome Formation,-0,,0.016,"MRC1,PRKCE"
+Phagosome Maturation,-0,,0.0132,"MPO,TUBA8"
+Phospholipase C Signaling,-0,0,0.0195,"GNG2,GPLD1,MYL9,NFATC3,PRKCE"
+Phospholipases,-0,,0.0159,GPLD1
+Phototransduction Pathway,-0,,0.0189,CNGA1
+Prolactin Signaling,-0,,0.0123,PRKCE
+Pyridoxal 5'-phosphate Salvage Pathway,-0,,0.0154,PRKCE
+Regulation of Actin-based Motility by Rho,-0,,0.0106,MYL9
+Regulation of Cellular Mechanics by Calpain Protease,-0,,0.0154,CNGA1
+Regulation of eIF4 and p70S6K Signaling,-0,,0.00637,MAPK11
+Regulation of the Epithelial-Mesenchymal Transition Pathway,-0,,0.0104,"DVL3,ID2"
+Remodeling of Epithelial Adherens Junctions,-0,,0.0147,TUBA8
+RhoGDI Signaling,-0,,0.0167,"GNAZ,GNG2,MYL9"
+"Role of Osteoblasts, Osteoclasts and Chondrocytes in Rheumatoid Arthritis",-0,,0.0182,"APC2,IL18RAP,MAPK10,NFATC3"
+Role of PI3K/AKT Signaling in the Pathogenesis of Influenza,-0,,0.0156,IFNK
+SPINK1 General Cancer Pathway,-0,,0.0145,PRSS1
+SPINK1 Pancreatic Cancer Pathway,-0,,0.0167,PRSS1
+Small Cell Lung Cancer Signaling,-0,,0.0141,PIAS3
+Sperm Motility,-0,,0.0179,"CNGA1,NTRK1,PRKCE,TNK2"
+Sphingosine-1-phosphate Signaling,-0,,0.0171,"ACER2,PDGFA"
+Superpathway of Melatonin Degradation,-0,,0.0154,MPO
+Synaptic Long Term Potentiation,-0,,0.0155,"GRM2,PRKCE"
+Synaptogenesis Signaling Pathway,-0,,0.00962,"GRM2,PRKCE,STXBP6"
+Systemic Lupus Erythematosus In T Cell Signaling Pathway,-0,1,0.012,"CD80,HLA-DQA2,IL23A,RORC"
+Systemic Lupus Erythematosus Signaling,-0,,0.00873,"CD80,NFATC3"
+T Cell Receptor Signaling,-0,,0.00952,NFATC3
+Thrombopoietin Signaling,-0,,0.0159,PRKCE
+Toll-like Receptor Signaling,-0,,0.0132,MAPK11
+VEGF Family Ligand-Receptor Interactions,-0,,0.0119,PRKCE
+Xenobiotic Metabolism CAR Signaling Pathway,-0,,0.0106,"GSTO1,PRKCE"
+Xenobiotic Metabolism PXR Signaling Pathway,-0,,0.0104,"GSTO1,PRKCE"
+Xenobiotic Metabolism Signaling,-0,,0.0105,"GSTO1,MAPK11,PRKCE"
+iCOS-iCOSL Signaling in T Helper Cells,-0,,0.018,"CD80,NFATC3"
+mTOR Signaling,-0,,0.00952,"GPLD1,PRKCE"
+p38 MAPK Signaling,-0,,0.0169,"IL18RAP,MAPK11"
+p70S6K Signaling,-0,,0.0155,"F2R,PRKCE"
+Assembly of RNA Polymerase II Complex,0.198,,0.02,POLR2J2/POLR2J3
+Hematopoiesis from Pluripotent Stem Cells,0.203,,0.0204,CXCL8
+Graft-versus-Host Disease Signaling,0.208,,0.0208,CD80
+nNOS Signaling in Neurons,0.213,,0.0213,PRKCE
+FAT10 Cancer Signaling Pathway,0.219,,0.0217,ACVR1
+Role of Oct4 in Mammalian Embryonic Stem Cell Pluripotency,0.219,,0.0217,TDRD7
+iNOS Signaling,0.225,,0.0222,MAPK11
+Nitric Oxide Signaling in the Cardiovascular System,0.23,,0.0202,"CACNA1A,PRKCE"
+Apelin Pancreas Signaling Pathway,0.231,,0.0227,MAPK10
+BAG2 Signaling Pathway,0.237,,0.0233,HSPA1A/HSPA1B
+Serotonin Receptor Signaling,0.237,,0.0233,HTR2B
+tRNA Splicing,0.237,,0.0233,PDE7B
+ATM Signaling,0.238,,0.0206,"MAPK10,MAPK11"
+Salvage Pathways of Pyrimidine Ribonucleotides,0.238,,0.0206,"APOBEC3B,PRKCE"
+Factors Promoting Cardiogenesis in Vertebrates,0.239,,0.02,"ACVR1,MAPK10,PRKCE"
+Relaxin Signaling,0.239,,0.02,"GNAZ,GNG2,PDE7B"
+Neuregulin Signaling,0.242,,0.0208,"ERRFI1,PRKCE"
+MIF Regulation of Innate Immunity,0.244,,0.0238,MAPK10
+GABA Receptor Signaling,0.247,,0.0211,"CACNA1A,CACNG6"
+Mechanisms of Viral Exit from Host Cells,0.25,,0.0244,PRKCE
+Fc? Receptor-mediated Phagocytosis in Macrophages and Monocytes,0.251,,0.0213,"GPLD1,PRKCE"
+Superpathway of Inositol Phosphate Compounds,0.254,2,0.0202,"DUSP16,EPHX2,PLPP7,SYNJ2"
+Xenobiotic Metabolism General Signaling Pathway,0.264,,0.021,"GSTO1,MAPK11,PRKCE"
+Antigen Presentation Pathway,0.265,,0.0256,HLA-DQA2
+Inhibition of Matrix Metalloproteases,0.265,,0.0256,ADAM12
+RAR Activation,0.266,,0.0206,"MAPK10,MAPK11,PRKCE,RELB"
+OX40 Signaling Pathway,0.27,,0.0222,"HLA-DQA2,MAPK10"
+"D-myo-inositol (1,4,5,6)-Tetrakisphosphate Biosynthesis",0.272,,0.0213,"DUSP16,EPHX2,PLPP7"
+"D-myo-inositol (3,4,5,6)-tetrakisphosphate Biosynthesis",0.272,,0.0213,"DUSP16,EPHX2,PLPP7"
+CTLA4 Signaling in Cytotoxic T Lymphocytes,0.275,,0.0225,"AP1M2,CD80"
+Hereditary Breast Cancer Signaling,0.276,,0.0214,"FANCB,POLR2J2/POLR2J3,RFC4"
+RANK Signaling in Osteoclasts,0.28,,0.0227,"MAPK10,MAPK11"
+ILK Signaling,0.28,2,0.0211,"ITGB5,MAPK10,MYH7B,MYL9"
+PPAR?/RXR? Activation,0.28,-1,0.0211,"ACVR1,IL18RAP,ITGB5,LPL"
+Notch Signaling,0.28,,0.027,HEY2
+B Cell Development,0.288,,0.0278,CD80
+Allograft Rejection Signaling,0.29,,0.0233,"CD80,HLA-DQA2"
+PDGF Signaling,0.29,,0.0233,"PDGFA,SYNJ2"
+BMP signaling pathway,0.295,,0.0235,"MAPK10,MAPK11"
+IL-4 Signaling,0.295,,0.0235,"NFATC3,SYNJ2"
+DNA Methylation and Transcriptional Repression Signaling,0.296,,0.0286,SAP30
+IL-17A Signaling in Fibroblasts,0.296,,0.0286,MAPK11
+Nucleotide Excision Repair Pathway,0.296,,0.0286,POLR2J2/POLR2J3
+Human Embryonic Stem Cell Pluripotency,0.296,,0.0222,"ACVR1,NTRK1,PDGFA"
+HER-2 Signaling in Breast Cancer,0.301,,0.0238,"ITGB5,PRKCE"
+Role of JAK2 in Hormone-like Cytokine Signaling,0.305,,0.0294,SH2B2
+NF-?B Activation by Viruses,0.312,,0.0244,"ITGB5,PRKCE"
+Estrogen Receptor Signaling,0.319,0.377964473,0.0213,"CACNA1A,GNAZ,GNG2,MED21,MT-ATP6,MYL9,PRKCE"
+Acute Phase Response Signaling,0.32,,0.0223,"HP,MAPK11,ORM2,VWF"
+Reelin Signaling in Neurons,0.323,,0.0233,"CNR1,MAPK10,PDK4"
+Chemokine Signaling,0.323,,0.025,"CCL4,MAPK11"
+FLT3 Signaling in Hematopoietic Progenitor Cells,0.323,,0.025,"MAPK11,STAT2"
+JAK/Stat Signaling,0.323,,0.025,"PIAS3,STAT2"
+Role of BRCA1 in DNA Damage Response,0.323,,0.025,"FANCB,RFC4"
+Glutathione-mediated Detoxification,0.324,,0.0312,GSTO1
+Thyroid Cancer Signaling,0.329,,0.0253,"CXCL8,NTRK1"
+Senescence Pathway,0.33,0.816496581,0.0218,"ACVR1,CACNA1A,CXCL8,IFNK,NFATC3,PDK4"
+14-3-3-mediated Signaling,0.333,,0.0236,"MAPK10,PRKCE,TUBA8"
+G Protein Signaling Mediated by Tubby,0.333,,0.0323,GNG2
+Heparan Sulfate Biosynthesis,0.336,,0.0256,"LIPE,PNPLA7"
+VDR/RXR Activation,0.336,,0.0256,"PDGFA,PRKCE"
+Wnt/?-catenin Signaling,0.344,-1,0.0231,"ACVR1,APC2,DVL3,SOX13"
+CCR3 Signaling in Eosinophils,0.347,,0.0242,"GNG2,MAPK11,PRKCE"
+RhoA Signaling,0.352,,0.0244,"MYL9,SEPTIN4,TTN"
+Mitochondrial Dysfunction,0.353,,0.0234,"ACO1,MAPK10,MT-ATP6,MT-ND4"
+Superpathway of Cholesterol Biosynthesis,0.355,,0.0345,MSMO1
+IL-15 Signaling,0.355,,0.0267,"CXCL8,MAPK11"
+Glioma Invasiveness Signaling,0.362,,0.027,"F2R,ITGB5"
+Tight Junction Signaling,0.366,,0.0238,"JAM3,MYH7B,MYL9,TJP3"
+CD28 Signaling in T Helper Cells,0.368,,0.025,"CD80,MAPK10,NFATC3"
+T Helper Cell Differentiation,0.368,,0.0274,"CD80,RORC"
+"Role of Macrophages, Fibroblasts and Endothelial Cells in Rheumatoid Arthritis",0.369,,0.0224,"APC2,CXCL8,IL18RAP,NFATC3,PDGFA,PRKCE,PRSS1"
+AMPK Signaling,0.374,,0.0234,"CHRNA2,EPM2A,LIPE,MAPK11,SLC2A4"
+Basal Cell Carcinoma Signaling,0.375,,0.0278,"APC2,DVL3"
+Ephrin B Signaling,0.375,,0.0278,"GNAZ,GNG2"
+Integrin Signaling,0.378,2.236067977,0.0235,"CTTN,ITGB5,MYL9,TNK2,TTN"
+Renin-Angiotensin Signaling,0.379,,0.0254,"MAPK10,MAPK11,PRKCE"
+HMGB1 Signaling,0.38,,0.0242,"CXCL8,KAT2A,MAPK10,MAPK11"
+Growth Hormone Signaling,0.383,,0.0282,"PRKCE,SLC2A4"
+Heparan Sulfate Biosynthesis (Late Stages),0.383,,0.0282,"LIPE,PNPLA7"
+Neuroprotective Role of THOP1 in Alzheimer's Disease,0.384,,0.0256,"PRSS1,PRSS57,TMPRSS9"
+Role of Tissue Factor in Cancer,0.384,,0.0256,"CXCL8,ITGB5,MAPK11"
+fMLP Signaling in Neutrophils,0.39,,0.0259,"GNG2,NFATC3,PRKCE"
+IL-10 Signaling,0.397,,0.029,"IL18RAP,MAPK11"
+HIF1? Signaling,0.408,,0.0265,"MAPK10,MAPK11,SLC2A4"
+eNOS Signaling,0.409,,0.0252,"CHRNA2,CNGA1,HSPA1A/HSPA1B,PRKCE"
+"Role of JAK1, JAK2 and TYK2 in Interferon Signaling",0.417,,0.0417,STAT2
+TCA Cycle II (Eukaryotic),0.417,,0.0417,ACO1
+Type I Diabetes Mellitus Signaling,0.42,,0.027,"CD80,MAPK10,MAPK11"
+Eicosanoid Signaling,0.421,,0.0303,"PTGIR,TBXA2R"
+CD40 Signaling,0.429,,0.0308,"MAPK10,MAPK11"
+IL-17A Signaling in Airway Cells,0.429,,0.0308,"MAPK10,MAPK11"
+3-phosphoinositide Degradation,0.429,2,0.0258,"DUSP16,EPHX2,PLPP7,SYNJ2"
+PKC? Signaling in T Lymphocytes,0.429,,0.0258,"CACNA1A,CACNG6,CD80,NFATC3"
+"Superpathway of D-myo-inositol (1,4,5)-trisphosphate Metabolism",0.431,,0.0435,SYNJ2
+Opioid Signaling Pathway,0.433,0.816496581,0.0243,"CACNA1A,CACNG6,GNG2,PRKCE,RGS6,RYR3"
+CDK5 Signaling,0.439,,0.0278,"CACNA1A,MAPK10,MAPK11"
+Paxillin Signaling,0.439,,0.0278,"ITGB5,MAPK10,MAPK11"
+Sirtuin Signaling Pathway,0.444,1.341640786,0.0241,"CXCL8,KAT2A,MAP1LC3B2,MT-ATP6,MT-ND4,SCNN1A,TUBA8"
+Virus Entry via Endocytic Pathways,0.445,,0.028,"AP1M2,ITGB5,PRKCE"
+Epithelial Adherens Junction Signaling,0.445,,0.0263,"ACVR1,MYH7B,MYL9,TUBA8"
+Signaling by Rho Family GTPases,0.446,1,0.0246,"DIAPH3,GNAZ,GNG2,MAPK10,MYL9,SEPTIN4"
+Leukocyte Extravasation Signaling,0.449,,0.0254,"CTTN,JAM3,MAPK10,MAPK11,PRKCE"
+Natural Killer Cell Signaling,0.449,-0.447213595,0.0254,"COL18A1,HSPA1A/HSPA1B,IL18RAP,MAPK11,NFATC3"
+Glucocorticoid Receptor Signaling,0.451,,0.0238,"CCL3,CXCL8,HSPA1A/HSPA1B,KRT5,MAPK10,MAPK11,NFATC3,POLR2J2/POLR2J3"
+"PD-1, PD-L1 cancer immunotherapy pathway",0.452,,0.0283,"CD274,CD80,HLA-DQA2"
+Wnt/Ca+ pathway,0.455,,0.0323,"DVL3,NFATC3"
+Maturity Onset Diabetes of Young (MODY) Signaling,0.463,,0.0476,CACNA1A
+Cardiac Hypertrophy Signaling,0.463,1,0.025,"CACNA1A,GNAZ,GNG2,MAPK10,MAPK11,MYL9"
+NER Pathway,0.472,,0.0291,"POLE2,POLR2J2/POLR2J3,RFC4"
+Sumoylation Pathway,0.472,,0.0291,"MAPK10,RFC4,SUMO4"
+PCP pathway,0.474,,0.0333,"DVL3,MAPK10"
+Retinoic acid Mediated Apoptosis Signaling,0.474,,0.0333,"IFNK,PARP3"
+Huntington's Disease Signaling,0.477,,0.0253,"GNG2,HSPA1A/HSPA1B,NTRK1,POLR2J2/POLR2J3,PRKCE,UBE2S"
+SAPK/JNK Signaling,0.479,,0.0294,"GNG2,MAPK10,NFATC3"
+Endothelin-1 Signaling,0.495,1,0.0266,"GNAZ,GPLD1,MAPK10,MAPK11,PRKCE"
+Production of Nitric Oxide and Reactive Oxygen Species in Macrophages,0.495,,0.0266,"MAPK10,MAPK11,MPO,ORM2,PRKCE"
+Apelin Muscle Signaling Pathway,0.498,,0.0526,SLC2A4
+Apoptosis Signaling,0.501,,0.0303,"GAS2,LMNA,PRKCE"
+Role of CHK Proteins in Cell Cycle Checkpoint Control,0.503,,0.0351,"CLSPN,RFC4"
+UVA-Induced MAPK Signaling,0.509,,0.0306,"MAPK10,MAPK11,PARP3"
+Cardiac ?-adrenergic Signaling,0.51,,0.0284,"AKAP5,CACNA1A,GNG2,PDE7B"
+Hepatic Cholestasis,0.511,,0.027,"CETP,CXCL8,IL18RAP,MAPK10,PRKCE"
+Sertoli Cell-Sertoli Cell Junction Signaling,0.511,,0.027,"JAM3,MAPK10,MAPK11,TJP3,TUBA8"
+Unfolded protein response,0.513,,0.0357,"DNAJB9,HSPA1A/HSPA1B"
+PAK Signaling,0.517,,0.0309,"MAPK10,MYL9,PDGFA"
+1D-myo-inositol Hexakisphosphate Biosynthesis II (Mammalian),0.518,,0.0556,SYNJ2
+"D-myo-inositol (1,3,4)-trisphosphate Biosynthesis",0.518,,0.0556,SYNJ2
+Purine Nucleotides Degradation II (Aerobic),0.518,,0.0556,NT5M
+?-Adrenergic Signaling,0.525,,0.0312,"EPM2A,GNG2,PRKCE"
+Role of NFAT in Regulation of the Immune Response,0.533,1,0.0276,"AKAP5,CD80,GNAZ,GNG2,NFATC3"
+"D-myo-inositol (1,4,5)-trisphosphate Degradation",0.538,,0.0588,SYNJ2
+Granulocyte Adhesion and Diapedesis,0.539,,0.0278,"CCL3,CCL4,CXCL8,IL18RAP,JAM3"
+ErbB Signaling,0.541,,0.0319,"MAPK10,MAPK11,PRKCE"
+Th2 Pathway,0.543,,0.0294,"ACVR1,CCR8,CD80,HLA-DQA2"
+Adipogenesis pathway,0.556,,0.0299,"KAT2A,LPL,SAP30,SLC2A4"
+Androgen Biosynthesis,0.56,,0.0625,SRD5A3
+Extrinsic Prothrombin Activation Pathway,0.56,,0.0625,F12
+Mismatch Repair in Eukaryotes,0.56,,0.0625,RFC4
+Parkinson's Signaling,0.56,,0.0625,MAPK11
+Death Receptor Signaling,0.566,,0.033,"GAS2,LMNA,PARP3"
+Th17 Activation Pathway,0.566,,0.033,"IL23A,NFATC3,RORC"
+Altered T Cell and B Cell Signaling in Rheumatoid Arthritis,0.575,,0.0333,"CD80,IL23A,RELB"
+Cellular Effects of Sildenafil (Viagra),0.578,,0.0305,"CACNA1A,CACNG6,MYH7B,MYL9"
+Amyloid Processing,0.581,,0.04,"MAPK11,PRKCE"
+Regulation of IL-2 Expression in Activated and Anergic T Lymphocytes,0.583,,0.0337,"CD80,MAPK10,NFATC3"
+Adenosine Nucleotides Degradation II,0.584,,0.0667,NT5M
+G?12/13 Signaling,0.585,1,0.0308,"F2R,MAPK10,MYL9,TBXA2R"
+White Adipose Tissue Browning Pathway,0.592,,0.031,"CACNA1A,CACNG6,LIPE,MAPK11"
+Autoimmune Thyroid Disease Signaling,0.593,,0.0408,"CD80,TG"
+Neuroinflammation Signaling Pathway,0.603,1.133893419,0.0267,"ACVR1,CCL3,CD80,CXCL8,IRF7,MAPK10,MAPK11,NFATC3"
+FXR/RXR Activation,0.615,,0.0317,"CETP,LPL,MAPK10,ORM2"
+Stearate Biosynthesis I (Animals),0.619,,0.0426,"SRD5A3,THEM5"
+CXCR4 Signaling,0.62,1,0.0299,"GNAZ,GNG2,MAPK10,MYL9,PRKCE"
+IL-6 Signaling,0.623,,0.032,"CXCL8,IL18RAP,MAPK10,MAPK11"
+Thrombin Signaling,0.629,,0.0288,"F2R,GNAZ,GNG2,MAPK11,MYL9,PRKCE"
+TR/RXR Activation,0.63,,0.0357,"HP,NRGN,SLC16A2"
+Acyl-CoA Hydrolysis,0.638,,0.0769,THEM5
+Cholesterol Biosynthesis I,0.638,,0.0769,MSMO1
+"Cholesterol Biosynthesis II (via 24,25-dihydrolanosterol)",0.638,,0.0769,MSMO1
+Cholesterol Biosynthesis III (via Desmosterol),0.638,,0.0769,MSMO1
+Role of IL-17A in Psoriasis,0.638,,0.0769,CXCL8
+Urate Biosynthesis/Inosine 5'-phosphate Degradation,0.638,,0.0769,NT5M
+Tec Kinase Signaling,0.64,,0.0305,"GNAZ,GNG2,MAPK10,PRKCE,STAT2"
+Apelin Adipocyte Signaling Pathway,0.65,,0.0366,"LIPE,MAPK10,MAPK11"
+LPS-stimulated MAPK Signaling,0.65,,0.0366,"MAPK10,MAPK11,PRKCE"
+LXR/RXR Activation,0.655,,0.0331,"CETP,IL18RAP,LPL,ORM2"
+IL-23 Signaling Pathway,0.661,,0.0455,"IL23A,RORC"
+Guanosine Nucleotides Degradation III,0.669,,0.0833,NT5M
+NAD biosynthesis II (from tryptophan),0.669,,0.0833,NMNAT3
+IL-17 Signaling,0.671,,0.0375,"CXCL8,MAPK10,MAPK11"
+Role of MAPK Signaling in the Pathogenesis of Influenza,0.671,,0.0375,"MAPK10,MAPK11,RABGEF1"
+Agrin Interactions at Neuromuscular Junction,0.681,,0.038,"AGRN,CTTN,MAPK10"
+Aldosterone Signaling in Epithelial Cells,0.683,,0.0316,"DNAJB9,HSPA1A/HSPA1B,HSPB11,PRKCE,SCNN1A"
+Fc Epsilon RI Signaling,0.689,,0.0342,"MAPK10,MAPK11,PRKCE,SYNJ2"
+Intrinsic Prothrombin Activation Pathway,0.691,,0.0476,"COL18A1,F12"
+Retinol Biosynthesis,0.691,,0.0476,"LIPE,LPL"
+Role of IL-17F in Allergic Inflammatory Airway Diseases,0.691,,0.0476,"CCL4,CXCL8"
+Role of Wnt/GSK-3? Signaling in the Pathogenesis of Influenza,0.692,,0.0385,"APC2,DVL3,IFNK"
+Endocannabinoid Developing Neuron Pathway,0.706,,0.0348,"CNR1,GNG2,MAPK10,MAPK11"
+Agranulocyte Adhesion and Diapedesis,0.726,,0.0311,"CCL3,CCL4,CXCL8,JAM3,MYH7B,MYL9"
+Clathrin-mediated Endocytosis Signaling,0.726,,0.0311,"AP1M2,CTTN,F2R,ITGB5,ORM2,PDGFA"
+Fc?RIIB Signaling in B Lymphocytes,0.726,,0.04,"CACNA1A,CACNG6,MAPK10"
+TREM1 Signaling,0.726,,0.04,"CCL3,CXCL8,MPO"
+GPCR-Mediated Nutrient Sensing in Enteroendocrine Cells,0.734,1,0.0357,"CACNA1A,CACNG6,GNG2,PRKCE"
+Glycine Betaine Degradation,0.74,,0.1,SRR
+G-Protein Coupled Receptor Signaling,0.752,,0.0294,"CNR1,GRM2,HTR2B,PDE7B,PRKCE,PTGIR,RXFP4,TBXA2R"
+NRF2-mediated Oxidative Stress Response,0.754,0,0.0317,"DNAJB9,GSTO1,PMF1/PMF1-BGLAP,PRKCE,TXN,UBE2K"
+Synaptic Long Term Depression,0.754,1.632993162,0.0317,"CACNA1A,CACNG6,GNAZ,GRM2,PRKCE,RYR3"
+Melatonin Signaling,0.762,,0.0417,"PRKCE,RORC,SLC2A4"
+Corticotropin Releasing Hormone Signaling,0.786,0,0.0345,"CACNA1A,CACNG6,CNR1,MAPK11,PRKCE"
+Type II Diabetes Mellitus Signaling,0.813,,0.0352,"CACNA1A,CACNG6,MAPK10,PRKCE,SLC2A4"
+Mouse Embryonic Stem Cell Pluripotency,0.824,,0.0388,"DVL3,ID2,ID3,MAPK11"
+Airway Pathology in Chronic Obstructive Pulmonary Disease,0.828,,0.125,CXCL8
+Salvage Pathways of Pyrimidine Deoxyribonucleotides,0.828,,0.125,APOBEC3B
+Sphingosine and Sphingosine-1-phosphate Metabolism,0.828,,0.125,ACER2
+Inhibition of Angiogenesis by TSP1,0.834,,0.0588,"MAPK10,MAPK11"
+Iron homeostasis signaling pathway,0.858,,0.0365,"ACO1,HBQ1,HP,LYRM4,PDGFA"
+Role of NFAT in Cardiac Hypertrophy,0.865,1.632993162,0.0327,"AKAP5,CACNA1A,CACNG6,GNG2,MAPK10,MAPK11,PRKCE"
+4-1BB Signaling in T Lymphocytes,0.877,,0.0625,"MAPK10,MAPK11"
+STAT3 Pathway,0.877,,0.037,"IL18RAP,MAPK10,MAPK11,NTRK1,PIAS3"
+GNRH Signaling,0.879,,0.0347,"CACNA1A,CACNG6,GNG2,MAPK10,MAPK11,PRKCE"
+Glycogen Biosynthesis II (from UDP-D-Glucose),0.882,,0.143,EPM2A
+NAD Salvage Pathway III,0.882,,0.143,NMNAT3
+Phosphatidylcholine Biosynthesis I,0.882,,0.143,PCYT1B
+Thioredoxin Pathway,0.882,,0.143,TXN
+Communication between Innate and Adaptive Immune Cells,0.904,,0.0417,"CCL3,CCL4,CD80,CXCL8"
+TGF-? Signaling,0.904,,0.0417,"ACVR1,IRF7,MAPK11,ZFYVE9"
+IL-12 Signaling and Production in Macrophages,0.907,,0.0379,"IL23A,MAPK10,MAPK11,ORM2,PRKCE"
+CREB Signaling in Neurons,0.919,,0.0338,"CACNA1A,CACNG6,GNAZ,GNG2,GRM2,POLR2J2/POLR2J3,PRKCE"
+Arginine Biosynthesis IV,0.944,,0.167,OAT
+Arginine Degradation VI (Arginase 2 Pathway),0.944,,0.167,OAT
+Ceramide Degradation,0.944,,0.167,ACER2
+NAD Biosynthesis III,0.944,,0.167,NMNAT3
+NAD Biosynthesis from 2-amino-3-carboxymuconate Semialdehyde,0.944,,0.167,NMNAT3
+Proline Biosynthesis II (from Arginine),0.944,,0.167,OAT
+Zymosterol Biosynthesis,0.944,,0.167,MSMO1
+Cardiac Hypertrophy Signaling (Enhanced),0.96,0.277350098,0.0287,"ACVR1,CACNA1A,CXCL8,DIAPH3,DVL3,GNG2,IL18RAP,MAPK10,MAPK11,NFATC3,PDE7B,PRKCE,RYR3,TG"
+IL-1 Signaling,0.966,,0.044,"GNAZ,GNG2,MAPK10,MAPK11"
+Atherosclerosis Signaling,0.969,,0.0397,"COL18A1,CXCL8,LPL,ORM2,PDGFA"
+Axonal Guidance Signaling,0.976,,0.0289,"ABLIM3,ADAM12,ADAM23,ADAMTS17,GNAZ,GNG2,MYL9,NFATC3,NTRK1,PDGFA,PRKCE,SEMA3G,SEMA6A,TUBA8"
+G?i Signaling,0.98,-0.447213595,0.04,"CNR1,GNG2,GRM2,RXFP4,TBXA2R"
+Glutamate Receptor Signaling,0.981,,0.0526,"GNG2,GRM2,HOMER1"
+Protein Kinase A Signaling,0.99,0,0.0302,"AKAP5,CNGA1,DUSP16,EPM2A,GNG2,LIPE,MYL9,NFATC3,PDE7B,PRKCE,RYR3,TTN"
+Role of IL-17A in Arthritis,1.02,,0.0545,"CXCL8,MAPK10,MAPK11"
+G?q Signaling,1.02,-0.447213595,0.038,"EPM2A,GNG2,GPLD1,HTR2B,NFATC3,PRKCE"
+Th1 Pathway,1.03,,0.0413,"CD274,CD80,HLA-DQA2,IL27,NFATC3"
+Apelin Liver Signaling Pathway,1.03,,0.0769,"COL18A1,MAPK10"
+NAD Salvage Pathway II,1.03,,0.0769,"NMNAT3,NT5M"
+Role of Cytokines in Mediating Communication between Immune Cells,1.03,,0.0556,"CXCL8,IL23A,IL27"
+GP6 Signaling Pathway,1.05,1.341640786,0.042,"COL17A1,COL18A1,COL4A1,LAMB3,PRKCE"
+Role of JAK family kinases in IL-6-type Cytokine Signaling,1.06,,0.08,"MAPK10,MAPK11"
+cAMP-mediated signaling,1.06,0.377964473,0.0351,"AKAP5,CNGA1,CNR1,GRM2,PDE7B,PTGIR,RXFP4,TBXA2R"
+UVB-Induced MAPK Signaling,1.07,,0.0577,"MAPK10,MAPK11,PRKCE"
+IL-22 Signaling,1.09,,0.0833,"MAPK10,MAPK11"
+UVC-Induced MAPK Signaling,1.09,,0.0588,"MAPK10,MAPK11,PRKCE"
+Arginine Degradation I (Arginase Pathway),1.11,,0.25,OAT
+Arsenate Detoxification I (Glutaredoxin),1.11,,0.25,GSTO1
+Ascorbate Recycling (Cytosolic),1.11,,0.25,GSTO1
+Differential Regulation of Cytokine Production in Intestinal Epithelial Cells by IL-17A and IL-17F,1.12,,0.087,"CCL3,CCL4"
+Role of Lipids/Lipid Rafts in the Pathogenesis of Influenza,1.12,,0.087,"IFNK,RSAD2"
+Dendritic Cell Maturation,1.13,2.449489743,0.0383,"CD80,COL18A1,IL23A,MAPK10,MAPK11,RELB,STAT2"
+Actin Cytoskeleton Signaling,1.15,0,0.0367,"APC2,DIAPH3,F2R,FGD1,MYH7B,MYL9,PDGFA,TTN"
+Triacylglycerol Degradation,1.18,,0.0638,"LIPE,LPL,PNPLA7"
+Macropinocytosis Signaling,1.19,,0.0526,"ITGB5,MRC1,PDGFA,PRKCE"
+G?s Signaling,1.2,1,0.0467,"CNGA1,CNR1,GNG2,PTGIR,RYR3"
+Insulin Receptor Signaling,1.21,,0.0429,"EPM2A,LIPE,SCNN1A,SLC2A4,SYNJ2,TRIP10"
+T Cell Exhaustion Signaling Pathway,1.21,1.341640786,0.04,"ACVR1,CD274,CD80,HLA-DQA2,MAPK10,NFATC3,STAT2"
+Hypusine Biosynthesis,1.23,,0.333,DOHH
+L-serine Degradation,1.23,,0.333,SRR
+Oxidized GTP and dGTP Detoxification,1.23,,0.333,DDX6
+Th1 and Th2 Activation Pathway,1.26,,0.0409,"ACVR1,CCR8,CD274,CD80,HLA-DQA2,IL27,NFATC3"
+Androgen Signaling,1.26,,0.0441,"CACNA1A,CACNG6,GNAZ,GNG2,POLR2J2/POLR2J3,PRKCE"
+Role of Hypercytokinemia/hyperchemokinemia in the Pathogenesis of Influenza,1.27,,0.0698,"CCL3,CCL4,CXCL8"
+Systemic Lupus Erythematosus In B Cell Signaling Pathway,1.31,1.264911064,0.0364,"CXCL8,IFIH1,IFIT2,IFIT3,IFNK,IRF7,NFATC3,PRKCE,STAT2,SYNJ2"
+Differential Regulation of Cytokine Production in Macrophages and T Helper Cells by IL-17A and IL-17F,1.31,,0.111,"CCL3,CCL4"
+Apelin Cardiomyocyte Signaling Pathway,1.32,2,0.0505,"MAPK10,MAPK11,MYL9,PRKCE,SLC9A3"
+B Cell Activating Factor Signaling,1.32,,0.0732,"MAPK10,MAPK11,NFATC3"
+Protein Ubiquitination Pathway,1.32,,0.0366,"DNAJB9,HSPA1A/HSPA1B,HSPB11,PSMD9,UBE2B,UBE2F,UBE2K,UBE2S,USP48,USP49"
+IL-8 Signaling,1.32,0.707106781,0.04,"CXCL8,GNG2,GPLD1,ITGB5,MAPK10,MPO,MYL9,PRKCE"
+Endocannabinoid Neuronal Synapse Pathway,1.37,1.341640786,0.0469,"CACNA1A,CACNG6,CNR1,GNG2,MAPK10,MAPK11"
+April Mediated Signaling,1.37,,0.0769,"MAPK10,MAPK11,NFATC3"
+Glutamine Degradation I,1.4,,0.5,GLS2
+G Beta Gamma Signaling,1.45,0.816496581,0.0492,"CACNA1A,CACNG6,CAV2,GNAZ,GNG2,PRKCE"
+Choline Biosynthesis III,1.46,,0.133,"GPLD1,PCYT1B"
+Superpathway of Citrulline Metabolism,1.46,,0.133,"GLS2,OAT"
+Gustation Pathway,1.46,,0.0455,"CACNA1A,CACNG6,GNG2,PDE7B,SCNN1A,TAS2R31,TAS2R43"
+Hepatic Fibrosis / Hepatic Stellate Cell Activation,1.48,,0.043,"COL17A1,COL18A1,COL4A1,CXCL8,IL18RAP,MYH7B,MYL9,PDGFA"
+Coagulation System,1.49,,0.0857,"F12,F2R,VWF"
+Breast Cancer Regulation by Stathmin1,1.54,,0.0321,"ACKR4,CCR8,CNR1,F2R,GNG2,GPR150,GPR19,GPR21,GPR25,GPR61,GRM2,HTR2B,NTSR1,PRKCE,PTGIR,RXFP4,TBXA2R,TUBA8,UHMK1"
+Melatonin Degradation III,1.7,,1,MPO
+Cdc42 Signaling,1.72,0.816496581,0.0479,"APC2,DIAPH3,FGD1,HLA-DQA2,MAPK10,MAPK11,MYL9,TNK2"
+Hepatic Fibrosis Signaling Pathway,1.79,1.603567451,0.038,"ACVR1,CACNA1A,CCL3,CNR1,COL18A1,CXCL8,DVL3,IL18RAP,MAPK10,MAPK11,MYL9,PDGFA,PRKCE,TTN"
+Hypoxia Signaling in the Cardiovascular System,1.8,,0.0676,"SLC2A4,UBE2B,UBE2F,UBE2K,UBE2S"
+IL-17A Signaling in Gastric Cells,1.89,,0.12,"CXCL8,MAPK10,MAPK11"
+Citrulline Biosynthesis,1.89,,0.222,"GLS2,OAT"
+Pathogenesis of Multiple Sclerosis,1.89,,0.222,"CCL3,CCL4"
+Role of RIG1-like Receptors in Antiviral Innate Immunity,1.95,1,0.0909,"DDX58,DHX58,IFIH1,IRF7"
+Netrin Signaling,2.02,1.341640786,0.0769,"ABLIM3,CACNA1A,CACNG6,NFATC3,RYR3"
+nNOS Signaling in Skeletal Muscle Cells,2.06,,0.0976,"CACNA1A,CACNG6,RYR3,SNTB2"
+Calcium Signaling,2.07,1.632993162,0.0485,"AKAP5,CACNA1A,CACNG6,CHRNA2,MYH7B,MYL9,NFATC3,RYR3,TNNT1,TRPC3"
+Antioxidant Action of Vitamin C,2.21,,0.0642,"GPLD1,GSTO1,MAPK10,MAPK11,SLC23A1,SLC2A4,TXN"
+Role of Pattern Recognition Receptors in Recognition of Bacteria and Viruses,2.42,2.449489743,0.0584,"CXCL8,DDX58,IFIH1,IFNK,IRF7,MAPK10,OAS1,OAS3,PRKCE"
+Role of PKR in Interferon Induction and Antiviral Response,2.62,2.121320344,0.0684,"DDX58,HSPA1A/HSPA1B,IFIH1,IFNK,MAPK10,MAPK11,PDGFA,STAT2"
+Vitamin-C Transport,2.92,-1,0.167,"GSTO1,SLC23A1,SLC2A4,TXN"
+CCR5 Signaling in Macrophages,3.24,1,0.0851,"CACNA1A,CACNG6,CCL3,CCL4,GNG2,MAPK10,MAPK11,PRKCE"
+Activation of IRF by Cytosolic Pattern Recognition Receptors,3.6,1.889822365,0.111,"DDX58,DHX58,IFIH1,IFIT2,IRF7,MAPK10,STAT2"
+Interferon Signaling,6.37,2.828427125,0.222,"IFI35,IFI6,IFIT1,IFIT3,IFITM3,MX1,OAS1,STAT2"

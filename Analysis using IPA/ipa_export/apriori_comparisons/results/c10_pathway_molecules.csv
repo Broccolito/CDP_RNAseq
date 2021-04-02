@@ -1,0 +1,4 @@
+canonical_pathways,X.log.p.value.,zScore,Ratio,Molecules_C10
+Insulin Secretion Signaling Pathway,0.505,2,0.0165,"EIF4EBP3,RYR3,SCNN1A,SLC2A4"
+Synaptogenesis Signaling Pathway,0.805,-0.816496581,0.0192,"CDH1,CDH4,EIF4EBP3,EPHA2,SHC3,STX1A"
+Cardiac Hypertrophy Signaling (Enhanced),0.472,-0.377964473,0.0144,"ACVR1B,FZD1,HSPB1,IL20RB,RYR3,SMPDL3A,TG"

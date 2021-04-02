@@ -1,0 +1,58 @@
+library(knitr)
+
+#Install biocManager if you don't have it 
+if(!requireNamespace("BiocManager", quietly = TRUE)){
+  install.packages("BiocManager")
+}
+
+#Install RNAseq packages
+if(!require("RNAseq123")){
+  BiocManager::install("RNAseq123") 
+}
+
+#Read the documentation
+#browseVignettes("RNAseq123")
+
+#Set up
+library(limma)
+library(Glimma)
+library(edgeR)
+library(Mus.musculus)
+
+#To get started with this analysis, download the file GSE63310_RAW.tar available online 
+############# Do not need to run twice if already installed
+# url <- "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE63310&format=file"
+# utils::download.file(url, destfile="GSE63310_RAW.tar", mode="wb") 
+# utils::untar("GSE63310_RAW.tar", exdir = ".")
+files <- c("GSM1545535_10_6_5_11.txt", "GSM1545536_9_6_5_11.txt", "GSM1545538_purep53.txt",
+           "GSM1545539_JMS8-2.txt", "GSM1545540_JMS8-3.txt", "GSM1545541_JMS8-4.txt",
+           "GSM1545542_JMS8-5.txt", "GSM1545544_JMS9-P7c.txt", "GSM1545545_JMS9-P8c.txt")
+for(i in paste(files, ".gz", sep="")){
+  R.utils::gunzip(i, overwrite=TRUE)
+}
+
+# Each of these text files contains the raw gene-level counts for a given sample. 
+# Note that our analysis only includes the basal, LP and ML samples from 
+# this experiment (see associated file names below).
+files <- c("GSM1545535_10_6_5_11.txt", "GSM1545536_9_6_5_11.txt", 
+           "GSM1545538_purep53.txt", "GSM1545539_JMS8-2.txt", 
+           "GSM1545540_JMS8-3.txt", "GSM1545541_JMS8-4.txt", 
+           "GSM1545542_JMS8-5.txt", "GSM1545544_JMS9-P7c.txt", 
+           "GSM1545545_JMS9-P8c.txt")
+read.delim(files[1], nrow=5)
+
+# Whilst each of the nine text files can be read into R separately and combined into a matrix of counts,
+x <- readDGE(files, columns=c(1,3))
+class(x)
+
+# Organising sample information
+samplenames <- substring(colnames(x), 12, nchar(colnames(x)))
+samplenames
+
+colnames(x) <- samplenames
+group <- as.factor(c("LP", "ML", "Basal", "Basal", "ML", "LP", 
+                     "Basal", "ML", "LP"))
+x$samples$group <- group
+lane <- as.factor(rep(c("L004","L006","L008"), c(3,4,2)))
+x$samples$lane <- lane
+kable(x$samples)

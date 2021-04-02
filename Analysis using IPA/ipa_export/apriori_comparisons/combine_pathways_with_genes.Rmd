@@ -1,0 +1,92 @@
+---
+title: "Combine Pathways With Significant Genes"
+output: html_notebook
+---
+
+```{r}
+library(dplyr)
+library(knitr)
+library(kableExtra)
+
+secod = read.csv("Apriori Pathways.csv")
+load("all_comparisons_from_ipa.RData")
+
+c18_molecules = read.csv("pathways_C18.csv")
+c18_molecules = rename(c18_molecules,
+                       "canonical_pathways" = "Ingenuity.Canonical.Pathways",
+                       "Molecules_C18" = "Molecules")
+c19_molecules = read.csv("pathways_C19.csv")
+c19_molecules = rename(c19_molecules,
+                       "canonical_pathways" = "Ingenuity.Canonical.Pathways",
+                       "Molecules_C19" = "Molecules")
+
+secod_molecules = left_join(secod, c18_molecules,by = "canonical_pathways") %>%
+  select(canonical_pathways,C1,C7, C18, C19, Molecules_C18) %>%
+  left_join(c19_molecules,by = "canonical_pathways") %>%
+  select(canonical_pathways, C1,C7, C18, C19,
+         Molecules_C18,Molecules_C19)
+
+overlapping_genes = vector()
+for(i in 1:dim(secod_molecules)[1]){
+  overlapping_genes = c(overlapping_genes,paste(intersect(
+    unlist(strsplit(secod_molecules$Molecules_C18[i],",")),
+    unlist(strsplit(secod_molecules$Molecules_C19[i],",")) 
+  ),collapse = ","))
+}
+
+secod_molecules = mutate(secod_molecules,
+                         overlapping_genes = overlapping_genes)
+
+unique_C18 = vector()
+for(i in 1:dim(secod_molecules)[1]){
+  overlapping = unlist(strsplit(secod_molecules$overlapping_genes[i],","))
+  c18_genes = unlist(strsplit(secod_molecules$Molecules_C18[i],","))
+  unique_C18 = c(unique_C18,
+                 paste(c18_genes[!(c18_genes %in% overlapping)],collapse = ","))
+}
+
+unique_C19 = vector()
+for(i in 1:dim(secod_molecules)[1]){
+  overlapping = unlist(strsplit(secod_molecules$overlapping_genes[i],","))
+  c19_genes = unlist(strsplit(secod_molecules$Molecules_C19[i],","))
+  unique_C19 = c(unique_C19,
+                 paste(c19_genes[!(c19_genes %in% overlapping)],collapse = ","))
+}
+
+secod_molecules = mutate(secod_molecules,
+                         unique_C18 = unique_C18,
+                         unique_C19 = unique_C19) %>%
+  mutate_at(c("canonical_pathways","Molecules_C18","Molecules_C19",
+              "overlapping_genes","unique_C18","unique_C19"),function(x){
+                gsub(",",";",x)
+              })
+
+```
+
+```{r}
+c18_molecules = c18_molecules %>% arrange(desc(abs(zScore))) %>%
+  mutate(Molecules_C18 = sapply(Molecules_C18, function(x){
+    gsub(",",";",x)
+  })) %>%
+  mutate(canonical_pathways = sapply(canonical_pathways, function(x){
+    gsub(",",";",x)
+  }))
+c19_molecules = c19_molecules %>% arrange(desc(abs(zScore))) %>%
+  mutate(Molecules_C19 = sapply(Molecules_C19, function(x){
+    gsub(",",";",x)
+  })) %>%
+  mutate(canonical_pathways = sapply(canonical_pathways, function(x){
+    gsub(",",";",x)
+  }))
+```
+
+```{r}
+write.csv(secod_molecules,file = "results/secod_molecules.csv",
+          quote = FALSE,row.names = FALSE)
+write.csv(c18_molecules,file = "results/c18_pathway_molecules.csv",
+          quote = FALSE,row.names = FALSE)
+write.csv(c19_molecules,file = "results/c19_pathway_molecules.csv",
+          quote = FALSE,row.names = FALSE)
+```
+
+

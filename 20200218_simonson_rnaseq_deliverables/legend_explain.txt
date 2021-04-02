@@ -1,0 +1,11 @@
+Here's a legend to interpret the glimma plot group names with their positions on the x-axis:
+N_Pr_FS = Control PreHem Fasting
+N_Pr_PoX = Control PreHem PostEx
+N_Pr_PrX = Control PreHem PreEx
+S_Po_FS = CMS PostHem Fasting
+S_Po_FS_I = CMS PostHem Fasting (5 samples highlighted in blue in metadata)
+S_Po_PoX = CMS PostHem PostEx
+S_Po_PrX = CMS PostHem PreEx
+S_Pr_FS = CMS PreHem Fasting
+S_Pr_PoX = CMS PreHem PostEx
+S_Pr_PrX = CMS PreHem PreEx

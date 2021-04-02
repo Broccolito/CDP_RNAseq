@@ -1,0 +1,140 @@
+---
+title: "Pi_value_simulation"
+author: "chang han"
+date: "3/14/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library("dplyr")
+```
+
+```{r}
+#rename and change CDP RNAseq Data Metasheet v1.1.xlsx, to cdp.csv, load and slightly modify the data
+
+df = read.csv(file='20200218_simonson_rnaseq_deliverables/cdp.csv',colClasses=c('character'))
+df$File_Name<-gsub("\\..*","",df$File_Name)
+patients<- select(df,-c(File_Name.1,Iteration,libType,Tissue,Date_Collected))
+head(patients)
+```
+```{r}
+#load the raw data of all patients,which is their gene expression data.
+rawdata=read.csv(file="20200218_simonson_rnaseq_deliverables/20191108_simonson_rnaseq_data_exploration_20200218092250_filtered_pc_genes_tmm_normed_cpms.csv")
+
+
+```
+```{r}
+#change the raw data to log2 expression level 
+rawdata[rawdata == 0] <- NA
+lg_rawdata= apply(rawdata[,-1], MARGIN = c(1,2), FUN = log2)
+lg_rawdata<-as.data.frame(lg_rawdata)
+lg_rawdata$X<-rawdata$X
+head(lg_rawdata)
+```
+
+
+
+
+```{r}
+#select patients by condition,treatment
+#for example select_patients(patients,condition="CMS",treatment="PREHEM_POSTEX")
+#return the file name of the pacients get selected
+select_patients<-function(patients_menu,condition,treatment){
+  df<-patients_menu %>%  filter(Condition == condition & 
+               (Treatment == treatment ))
+  return(df$File_Name)
+}
+
+```
+
+```{r}
+#simulate data under null hypothesis, which is there is no differential expression genes.
+list_of_patients<-names(lg_rawdata)
+simulate_null_dist<-function(condition,treatment1,treatment2){
+  #get patients file name
+  g1_patients<-select_patients(patients,condition,treatment1)
+  g2_patients<-select_patients(patients,condition,treatment2)
+  #get patients that in the list of patients in lg_rawdata(since some do not appear in lg_rawdata)
+  g1_patients<-g1_patients[g1_patients %in% list_of_patients]
+  g2_patients<-g2_patients[g2_patients %in% list_of_patients]
+  #get data for the patients of two treatment groups
+  g<-lg_rawdata[,c(g1_patients,g2_patients)]
+  num_m1<-length(g1_patients)
+  num_m2<-length(g2_patients)
+  num_m<-num_m1+num_m2
+  m1<-sample(1:num_m,num_m1,TRUE)
+  m2<-sample(1:num_m,num_m2,TRUE)
+  g1<-g[,m1]
+  g2<-g[,m2]
+  simulated_data <- list(g1,g2)
+  return (simulated_data)
+  
+}
+```
+```{r}
+l<-simulate_null_dist("CMS","PREHEM_POSTEX","PREHEM_PREEX")
+
+```
+
+```{r}
+#using data under null hypothesis, simulate the p value and obtain empirical distirbution
+simulate_pi<-function(condition,treatment1,treatment2){
+  pi_values<-data.frame(gene=rawdata$X)
+  for(i in seq(1,80)){
+    g<-simulate_null_dist(condition,treatment1,treatment2)
+    g1<-as.data.frame(g[1])
+    g2<-as.data.frame(g[2])
+    g1_mean<-rowMeans(g1,na.rm = TRUE)
+    g2_mean<-rowMeans(g2,na.rm = TRUE)
+    log_ratio<-as.vector(g1_mean-g2_mean)
+    logfc<-abs(log_ratio)
+    #calculate pvalue
+    std<-as.vector(apply(g1,1, sd, na.rm = TRUE))
+    t<-(g1_mean-g2_mean)/(std/sqrt(ncol(g1)))
+    calc_p <- function(t) {2*pt(-abs(t),df=ncol(g1)-1) }
+    pval<-sapply(t, calc_p)
+    #calculate pi values
+    pi_val<-as.vector(logfc* (-log10(pval)))
+    #add results to list
+    pi_values<-cbind(pi_values,pi_val)
+  }
+  return (pi_values)
+   
+  
+}
+
+```
+```{r}
+l<-simulate_pi("CMS","PREHEM_POSTEX","PREHEM_PREEX")
+
+
+```
+
+
+```{r}
+#calculate the critical pi value of each gene
+get_critical_pi<-function(condition,treatment1,treatment2,sig_level){
+  l<-simulate_pi(condition,treatment1,treatment2)
+  critical_pi<-c()
+  for(row in 1:nrow(l)){
+     pi <- l[row,-1 ]
+     sig_pi<-quantile(pi, sig_level,na.rm=TRUE)
+     critical_pi<-c(critical_pi,sig_pi)
+  }
+  critical_val<-data.frame(ENSEMBL=rawdata$X,critical_Val=critical_pi)
+  return(critical_val)
+}
+```
+
+```{r}
+#for example: get the critical pi value of each gene for comparison 1
+result<-get_critical_pi("CMS","PREHEM_POSTEX","PREHEM_PREEX",0.95)
+
+```
+```{r}
+head(result,n=10)
+```
+

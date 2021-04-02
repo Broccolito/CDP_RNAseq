@@ -1,0 +1,40 @@
+---
+title: "Plot Venn RNAseq"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r}
+suppressPackageStartupMessages({
+  library(dplyr)
+  
+})
+c1 = read.csv("C1_90.csv")
+c5 = read.csv("C5_90.csv")
+c7 = read.csv("C7_90.csv")
+
+c9 = read.csv("C9_90.csv")
+c12 = read.csv("C12_90.csv")
+c15 = read.csv("C15_90.csv")
+
+c10 = read.csv("C10_90.csv")
+c18 = read.csv("C18_90.csv")
+c19 = read.csv("C19_90.csv")
+```
+
+```{r}
+dim(c1)
+dim(c5)
+dim(c7)
+print("")
+dim(c9)
+dim(c12)
+dim(c15)
+print("")
+dim(c10)
+dim(c18)
+dim(c19)
+```
+
+

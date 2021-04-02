@@ -1,0 +1,46 @@
+---
+title: "get chromosome loc"
+author: "chang han"
+date: "3/20/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+#need r version 3.6 
+# if (!requireNamespace("BiocManager", quietly = TRUE)){
+# install.packages("BiocManager")}
+# BiocManager::install("biomaRt")
+```
+```{r}
+library("biomaRt")
+```
+```{r}
+#All files contain ensembl id information, so just choose any one of them and get the ensembl id.
+C1_CMS_PREHEM_POSTEXvsCMS_PREHEM_PREEX<- read.csv(file ='20200218_simonson_rnaseq_deliverables/C1_CMS_PREHEM_POSTEXvsCMS_PREHEM_PREEX/20191108_simonson_rnaseq_differential_expression_20200218093629_C1_CMS_PREHEM_POSTEXvsCMS_PREHEM_PREEX_AllGenes.csv')
+
+#get ensemble ids 
+ensembl_id<-C1_CMS_PREHEM_POSTEXvsCMS_PREHEM_PREEX$ENSEMBL
+```
+
+```{r}
+#create ensembl object with homo sapien dataset.
+ensembl = useMart("ensembl",dataset="hsapiens_gene_ensembl")
+```
+```{r}
+#see relevent filters about ensembl id 
+searchFilters(mart = ensembl, pattern = "ensembl")
+```
+```{r}
+#based on ensembl_id, get chromosome location name, start and end position
+
+chromosome_info<-getBM(attributes=c("ensembl_gene_id","chromosome_name","start_position", "end_position"), filter="ensembl_gene_id" ,values =ensembl_id, mart = ensembl)
+```
+
+```{r}
+#write the relevent chromosome information to csv
+write.csv(chromosome_info,"./significant_genes/chromosome_info.csv", row.names = FALSE)
+```
+For later use, for instance, we can retrieve the relevent chromosome information of our previously found significant genes by selecting entries with corresponding ensembl_id from chromosome_info.csv 

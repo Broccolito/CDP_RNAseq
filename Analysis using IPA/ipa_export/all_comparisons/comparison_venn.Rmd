@@ -1,0 +1,148 @@
+---
+title: "CDP RNAseq Comparison Venn Diagram"
+output: html_notebook
+---
+
+```{r}
+suppressPackageStartupMessages({
+  library(dplyr)
+})
+load("all_comparisons_from_ipa.RData")
+```
+
+## Canonical Pathways
+
+### First Order Comparisons
+
+#### At Fasting State
+
+
+```{r}
+
+c9_c12 = inner_join(all_comps$c9$canonical_pathway,
+           all_comps$c12$canonical_pathway,
+           by = "Ingenuity Canonical Pathways")
+c9_c12
+dim(c9_c12)[1]
+
+```
+
+```{r}
+
+c9_c15 = inner_join(all_comps$c9$canonical_pathway,
+           all_comps$c15$canonical_pathway,
+           by = "Ingenuity Canonical Pathways")
+c9_c15
+dim(c9_c15)[1]
+
+```
+
+```{r}
+
+c12_c15 = inner_join(all_comps$c12$canonical_pathway,
+           all_comps$c15$canonical_pathway,
+           by = "Ingenuity Canonical Pathways")
+c12_c15
+dim(c12_c15)[1]
+
+```
+
+```{r}
+
+c9_c12_c15 = inner_join(all_comps$c9$canonical_pathway,
+           all_comps$c12$canonical_pathway,
+           by = "Ingenuity Canonical Pathways") %>%
+  inner_join(all_comps$c15$canonical_pathway,
+             by = "Ingenuity Canonical Pathways")
+c9_c12_c15
+dim(c9_c12_c15)[1]
+
+```
+
+#### Between Fasting and Exercise
+
+```{r}
+
+c1_c5 = inner_join(all_comps$c1$canonical_pathway,
+           all_comps$c5$canonical_pathway,
+           by = "Ingenuity Canonical Pathways")
+c1_c5
+dim(c1_c5)[1]
+
+```
+
+```{r}
+
+c1_c7 = inner_join(all_comps$c1$canonical_pathway,
+           all_comps$c7$canonical_pathway,
+           by = "Ingenuity Canonical Pathways")
+c1_c7
+dim(c1_c7)[1]
+
+```
+
+```{r}
+
+c5_c7 = inner_join(all_comps$c5$canonical_pathway,
+           all_comps$c7$canonical_pathway,
+           by = "Ingenuity Canonical Pathways")
+c5_c7
+dim(c5_c7)[1]
+
+```
+
+```{r}
+
+c1_c5_c7 = inner_join(all_comps$c1$canonical_pathway,
+           all_comps$c5$canonical_pathway,
+           by = "Ingenuity Canonical Pathways") %>%
+  inner_join(all_comps$c7$canonical_pathway,
+             by = "Ingenuity Canonical Pathways")
+c1_c5_c7
+dim(c1_c5_c7)[1]
+
+```
+
+### Second Order Comparisons
+
+```{r}
+
+c10_c18 = inner_join(all_comps$c10$canonical_pathway,
+           all_comps$c18$canonical_pathway,
+           by = "Ingenuity Canonical Pathways")
+c10_c18
+dim(c10_c18)[1]
+
+```
+
+```{r}
+
+c10_c19 = inner_join(all_comps$c10$canonical_pathway,
+           all_comps$c19$canonical_pathway,
+           by = "Ingenuity Canonical Pathways")
+c10_c19
+dim(c10_c19)[1]
+
+```
+
+```{r}
+
+c18_c19 = inner_join(all_comps$c18$canonical_pathway,
+           all_comps$c19$canonical_pathway,
+           by = "Ingenuity Canonical Pathways")
+c18_c19
+dim(c18_c19)[1]
+
+```
+
+```{r}
+
+c10_c18_c19 = inner_join(all_comps$c10$canonical_pathway,
+           all_comps$c18$canonical_pathway,
+           by = "Ingenuity Canonical Pathways") %>%
+  inner_join(all_comps$c19$canonical_pathway,
+             by = "Ingenuity Canonical Pathways")
+c10_c18_c19
+dim(c10_c18_c19)[1]
+
+```

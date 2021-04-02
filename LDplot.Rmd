@@ -1,0 +1,128 @@
+---
+title: "Ld plot"
+author: "chang han"
+date: "5/8/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library("gaston")
+library("stringr")
+```
+```{r}
+data(AGT)
+x <- as.bed.matrix(AGT.gen, AGT.fam, AGT.bim)
+
+# Compute LD
+ld.x <- LD(x, c(1,ncol(x)))
+ld.x[1:10,1:10]
+```
+```{r}
+read<-readLines("cdp_ch2.phased.txt")
+grep("2:46588031",read)
+```
+```{r}
+#from the txt file data, according to the id of the gene of interest, get variants up and down stream of gene of interest, return a list containing two lists(1. variant_id, 2. haplotyping data)
+extract_data<-function(text,relevant_gene_name,up,down){
+  line_num<-grep(relevant_gene_name,text)
+  subtext<-text[(line_num-down):(line_num+up)]
+  list_of_haplotype<- list()
+  list_of_id<-list()
+  for(i in 1:(up+down+1)){
+    variant<-subtext[i]
+    haplotype<-sub(".*[A-Z]+","",variant)
+    variant_id<-strsplit(variant, " ")[[1]][2]
+    list_of_haplotype[[i]]<-haplotype
+    list_of_id[[i]]<-variant_id
+   
+  }
+  result<-list(list_of_id,list_of_haplotype)
+  return(result)
+}
+#d<-extract_data(read,"2:46588031",50,50)
+#d[[2]][[1]]
+#d[[1]][[1]]
+
+```
+
+```{r}
+data_list<-extract_data(read,"2:46588031",50,50)
+haplotype_list<-data_list[[2]]
+variant_names<-unlist(data_list[[1]])
+num_variant<-101
+num_haplotype<-80
+#create a matrix with each row corresponding to the haplotype data(01001..) for the corresponding variants
+generate_haplotype_mat<-function(list_haplotype_text,num_variant,num_haplotype){
+  mat<-matrix(nrow =num_variant, ncol = num_haplotype)
+  for(i in 1:num_variant){
+  str<-list_haplotype_text[[i]]
+  vec<-(lapply(str_split(str, ' '), as.integer)[[1]])
+  vec<-vec[!is.na(vec)]
+  mat[i,]<-vec
+  }
+  return(mat)
+}
+#create a matrix for 101 variants around "2:46588031" 
+mat_result<-generate_haplotype_mat(haplotype_list,num_variant=num_variant,num_haplotype = num_haplotype)
+dim(mat_result)
+```
+
+```{r}
+ld_coef_btw_two<-function(a1,a2){
+  len_a1<-length(a1)
+  len_a2<-length(a2)
+  p2<-sum(a1)/len_a1
+  p1<-1-p2
+  q2<-sum(a2)/len_a2
+  q1<-1-q2
+  #00
+  x11<-sum(c(a1==FALSE& a2==FALSE))/len_a1
+  #01
+  x12<-sum(c(a1==FALSE& a2==TRUE))/len_a1
+  #10
+  x21<-sum(c(a1==TRUE& a2==FALSE))/len_a1
+  #11
+  x22<-sum(c(a1==TRUE& a2==TRUE))/len_a1
+  D<-x11*x22-x12*x21
+  r_sqr<-D^2/(p1*p2*q1*q2)
+  if(p1==0 ||p2==0||q1==0 ||q2==0){
+    r_sqr=0
+  }
+  return(r_sqr)
+}
+```
+
+```{r}
+#create linkage coefficient matrix
+across_variants<-function(data,variant,num_gene){
+  vec<-c()
+  for(i in 1:num_gene){
+    vec<-c(vec,ld_coef_btw_two(variant,data[i,]))
+  }
+  return(vec)
+}
+generate_coef_matrix<-function(data,num_gene){
+  mat<-matrix(nrow=num_gene,ncol=num_gene)
+  for(i in 1:num_gene){
+    vec<-across_variants(data,data[i,],num_gene)
+    mat[i,]<-vec
+  }
+  return(mat)
+}
+coef_mat<-generate_coef_matrix(mat_result,num_gene=101)
+line_num<-grep("2:46588031",read)
+colnames(coef_mat)<-variant_names
+rownames(coef_mat)<-variant_names
+
+```
+```{r}
+LD.plot(round(coef_mat[40:60,40:60],4))
+```
+```{r}
+round(coef_mat[40:60,40:60],3)>0
+```
+
+

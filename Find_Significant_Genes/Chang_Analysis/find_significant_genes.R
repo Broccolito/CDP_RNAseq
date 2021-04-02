@@ -1,0 +1,115 @@
+library('dplyr')
+
+get_directory = function(){
+  args <- commandArgs(trailingOnly = FALSE)
+  file <- "--file="
+  rstudio <- "RStudio"
+  match <- grep(rstudio, args)
+  if(length(match) > 0){
+    return(dirname(rstudioapi::getSourceEditorContext()$path))
+  }else{
+    match <- grep(file, args)
+    if (length(match) > 0) {
+      return(dirname(normalizePath(sub(file, "", args[match]))))
+    }else{
+      return(dirname(normalizePath(sys.frames()[[1]]$ofile)))
+    }
+  }
+}
+
+wd = get_directory()
+setwd(wd)
+
+# preset the working directory to desktop where '20200218_simonson_rnaseq_deliverables' located
+# load all 19 sets of comparisons
+C1_CMS_PREHEM_POSTEXvsCMS_PREHEM_PREEX<- read.csv(file ='20200218_simonson_rnaseq_deliverables/C1_CMS_PREHEM_POSTEXvsCMS_PREHEM_PREEX/20191108_simonson_rnaseq_differential_expression_20200218093629_C1_CMS_PREHEM_POSTEXvsCMS_PREHEM_PREEX_AllGenes.csv')
+
+C2_CMS_POSTHEM_PREEXvsCMS_PREHEM_PREEX<-read.csv(file= '20200218_simonson_rnaseq_deliverables/C2_CMS_POSTHEM_PREEXvsCMS_PREHEM_PREEX/20191108_simonson_rnaseq_differential_expression_20200218093629_C2_CMS_POSTHEM_PREEXvsCMS_PREHEM_PREEX_AllGenes.csv')
+
+C3_CMS_PREHEM_PREEXvsCMS_PREHEM_FASTING<-read.csv(file='20200218_simonson_rnaseq_deliverables/C3_CMS_PREHEM_PREEXvsCMS_PREHEM_FASTING/20191108_simonson_rnaseq_differential_expression_20200218093629_C3_CMS_PREHEM_PREEXvsCMS_PREHEM_FASTING_AllGenes.csv')
+
+C4_CMS_POSTHEM_POSTEXvsCMS_PREHEM_POSTEX<-read.csv(file="20200218_simonson_rnaseq_deliverables/C4_CMS_POSTHEM_POSTEXvsCMS_PREHEM_POSTEX/20191108_simonson_rnaseq_differential_expression_20200218093629_C4_CMS_POSTHEM_POSTEXvsCMS_PREHEM_POSTEX_AllGenes.csv")
+
+C5_CMS_POSTHEM_POSTEXvsCMS_POSTHEM_PREEX<-read.csv(file='20200218_simonson_rnaseq_deliverables/C5_CMS_POSTHEM_POSTEXvsCMS_POSTHEM_PREEX/20191108_simonson_rnaseq_differential_expression_20200218093629_C5_CMS_POSTHEM_POSTEXvsCMS_POSTHEM_PREEX_AllGenes.csv')
+
+C6_CMS_POSTHEM_PREEXvsCMS_POSTHEM_FASTING<-read.csv(file='20200218_simonson_rnaseq_deliverables/C6_CMS_POSTHEM_PREEXvsCMS_POSTHEM_FASTING/20191108_simonson_rnaseq_differential_expression_20200218093629_C6_CMS_POSTHEM_PREEXvsCMS_POSTHEM_FASTING_AllGenes.csv')
+
+C7_CON_PREHEM_POSTEXvsCON_PREHEM_PREEX<-read.csv(file='20200218_simonson_rnaseq_deliverables/C7_CON_PREHEM_POSTEXvsCON_PREHEM_PREEX/20191108_simonson_rnaseq_differential_expression_20200218093629_C7_CON_PREHEM_POSTEXvsCON_PREHEM_PREEX_AllGenes.csv')
+
+C8_CON_PREHEM_PREEXvsCON_PREHEM_FASTING<-read.csv(file='20200218_simonson_rnaseq_deliverables/C8_CON_PREHEM_PREEXvsCON_PREHEM_FASTING/20191108_simonson_rnaseq_differential_expression_20200218093629_C8_CON_PREHEM_PREEXvsCON_PREHEM_FASTING_AllGenes.csv')
+
+C9_CMS_POSTHEM_FASTINGvsCMS_PREHEM_FASTING<-read.csv(file='20200218_simonson_rnaseq_deliverables/C9_CMS_POSTHEM_FASTINGvsCMS_PREHEM_FASTING/20191108_simonson_rnaseq_differential_expression_20200218093629_C9_CMS_POSTHEM_FASTINGvsCMS_PREHEM_FASTING_AllGenes.csv')
+
+C10_C5vsC1<-read.csv(file='20200218_simonson_rnaseq_deliverables/C10_C5vsC1/20191108_simonson_rnaseq_differential_expression_20200218093629_C10_C5vsC1_AllGenes.csv')
+
+C11_C6vsC3<-read.csv(file='20200218_simonson_rnaseq_deliverables/C11_C6vsC3/20191108_simonson_rnaseq_differential_expression_20200218093629_C11_C6vsC3_AllGenes.csv')
+
+C12_CMS_PREHEM_FASTINGvsCON_PREHEM_FASTING<-read.csv(file='20200218_simonson_rnaseq_deliverables/C12_CMS_PREHEM_FASTINGvsCON_PREHEM_FASTING/20191108_simonson_rnaseq_differential_expression_20200218093629_C12_CMS_PREHEM_FASTINGvsCON_PREHEM_FASTING_AllGenes.csv')
+
+C13_CMS_PREHEM_PREEXvsCON_PREHEM_PREEX<-read.csv(file='20200218_simonson_rnaseq_deliverables/C13_CMS_PREHEM_PREEXvsCON_PREHEM_PREEX/20191108_simonson_rnaseq_differential_expression_20200218093629_C13_CMS_PREHEM_PREEXvsCON_PREHEM_PREEX_AllGenes.csv')
+
+C14_CMS_PREHEM_POSTEXvsCON_PREHEM_POSTEX<-read.csv(file='20200218_simonson_rnaseq_deliverables/C14_CMS_PREHEM_POSTEXvsCON_PREHEM_POSTEX/20191108_simonson_rnaseq_differential_expression_20200218093629_C14_CMS_PREHEM_POSTEXvsCON_PREHEM_POSTEX_AllGenes.csv')
+
+C15_CMS_POSTHEM_FASTINGvsCON_PREHEM_FASTING<-read.csv(file='20200218_simonson_rnaseq_deliverables/C15_CMS_POSTHEM_FASTINGvsCON_PREHEM_FASTING/20191108_simonson_rnaseq_differential_expression_20200218093629_C15_CMS_POSTHEM_FASTINGvsCON_PREHEM_FASTING_AllGenes.csv')
+
+C16_CMS_POSTHEM_PREEXvsCON_PREHEM_PREEX<-read.csv(file='20200218_simonson_rnaseq_deliverables/C16_CMS_POSTHEM_PREEXvsCON_PREHEM_PREEX/20191108_simonson_rnaseq_differential_expression_20200218093629_C16_CMS_POSTHEM_PREEXvsCON_PREHEM_PREEX_AllGenes.csv')
+
+C17_CMS_POSTHEM_POSTEXvsCON_PREHEM_POSTEX<-read.csv(file='20200218_simonson_rnaseq_deliverables/C17_CMS_POSTHEM_POSTEXvsCON_PREHEM_POSTEX/20191108_simonson_rnaseq_differential_expression_20200218093629_C17_CMS_POSTHEM_POSTEXvsCON_PREHEM_POSTEX_AllGenes.csv')
+
+C18_C1vsC7<-read.csv(file='20200218_simonson_rnaseq_deliverables/C18_C1vsC7/20191108_simonson_rnaseq_differential_expression_20200218093629_C18_C1vsC7_AllGenes.csv')
+
+C19_C5vsC7<-read.csv(file='20200218_simonson_rnaseq_deliverables/C19_C5vsC7/20191108_simonson_rnaseq_differential_expression_20200218093629_C19_C5vsC7_AllGenes.csv')
+
+#find significant genes by log fold change, data with logFC passing the threshold will be selected
+find_significant_genes <- function(data, threshold) {
+  if(threshold>=0){
+    filtered<- data %>% 
+      select(ENSEMBL,ENTREZID, SYMBOL, gene_type, logFC, AveExpr, t, P.Value, adj.P.Val) %>%
+      filter(logFC>= threshold)
+    
+  }
+  else{
+    filtered<- data %>% 
+      select(ENSEMBL,ENTREZID, SYMBOL, gene_type, logFC, AveExpr, t, P.Value, adj.P.Val) %>%
+      filter(logFC<=threshold)
+    
+  }
+  return(filtered)
+}
+
+
+#save all comparison gene expression data into a list
+list_of_comparison <- list(C1_CMS_PREHEM_POSTEXvsCMS_PREHEM_PREEX,C2_CMS_POSTHEM_PREEXvsCMS_PREHEM_PREEX,
+                           C3_CMS_PREHEM_PREEXvsCMS_PREHEM_FASTING,C4_CMS_POSTHEM_POSTEXvsCMS_PREHEM_POSTEX,
+                           C5_CMS_POSTHEM_POSTEXvsCMS_POSTHEM_PREEX,C6_CMS_POSTHEM_PREEXvsCMS_POSTHEM_FASTING,
+                           C7_CON_PREHEM_POSTEXvsCON_PREHEM_PREEX,C8_CON_PREHEM_PREEXvsCON_PREHEM_FASTING,
+                           C9_CMS_POSTHEM_FASTINGvsCMS_PREHEM_FASTING,C10_C5vsC1,C11_C6vsC3,
+                           C12_CMS_PREHEM_FASTINGvsCON_PREHEM_FASTING,C13_CMS_PREHEM_PREEXvsCON_PREHEM_PREEX,
+                           C14_CMS_PREHEM_POSTEXvsCON_PREHEM_POSTEX,C15_CMS_POSTHEM_FASTINGvsCON_PREHEM_FASTING,
+                           C16_CMS_POSTHEM_PREEXvsCON_PREHEM_PREEX,C17_CMS_POSTHEM_POSTEXvsCON_PREHEM_POSTEX,
+                           C18_C1vsC7,C19_C5vsC7)
+nms <- c('C1_CMS_PREHEM_POSTEXvsCMS_PREHEM_PREEX','C2_CMS_POSTHEM_PREEXvsCMS_PREHEM_PREEX',
+         'C3_CMS_PREHEM_PREEXvsCMS_PREHEM_FASTING','C4_CMS_POSTHEM_POSTEXvsCMS_PREHEM_POSTEX',
+         'C5_CMS_POSTHEM_POSTEXvsCMS_POSTHEM_PREEX','C6_CMS_POSTHEM_PREEXvsCMS_POSTHEM_FASTING',
+         'C7_CON_PREHEM_POSTEXvsCON_PREHEM_PREEX','C8_CON_PREHEM_PREEXvsCON_PREHEM_FASTING',
+         'C9_CMS_POSTHEM_FASTINGvsCMS_PREHEM_FASTING','C10_C5vsC1,C11_C6vsC3','C11_C6vsC3',
+         'C12_CMS_PREHEM_FASTINGvsCON_PREHEM_FASTING','C13_CMS_PREHEM_PREEXvsCON_PREHEM_PREEX',
+         'C14_CMS_PREHEM_POSTEXvsCON_PREHEM_POSTEX','C15_CMS_POSTHEM_FASTINGvsCON_PREHEM_FASTING',
+         'C16_CMS_POSTHEM_PREEXvsCON_PREHEM_PREEX','C17_CMS_POSTHEM_POSTEXvsCON_PREHEM_POSTEX',
+         'C18_C1vsC7','C19_C5vsC7')
+names(list_of_comparison) = nms
+
+#write csv files, the ones that are larger than threshold are written in files starting with "thresh_greater_2", the ones are smaller than threshold are written in files starting with "thresh_smaller_neg2"
+# all resulting csv files are stored in a folder called significant genes.
+for(i in 1:length(list_of_comparison)){
+  threshold_greater_2<-find_significant_genes(list_of_comparison[[i]], 2)
+  threshold_smaller_neg2<- find_significant_genes(list_of_comparison[[i]],-2)
+  x=c("significant_genes/thresh_greater_2",names(list_of_comparison[i]))
+  x= paste(x, collapse="_")
+  filepath1=paste0(x,".csv")
+  y=c("significant_genes/thresh_smaller_neg2",names(list_of_comparison[i]))
+  y= paste(y, collapse="_")
+  filepath2=paste0(y,".csv")
+  write.csv(threshold_greater_2,filepath1, row.names = FALSE)
+  write.csv(threshold_smaller_neg2,filepath2, row.names = FALSE)
+}

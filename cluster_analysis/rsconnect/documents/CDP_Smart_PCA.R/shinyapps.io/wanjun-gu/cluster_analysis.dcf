@@ -1,0 +1,12 @@
+name: cluster_analysis
+title: cluster_analysis
+username:
+account: wanjun-gu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1982651
+bundleId: 2913935
+url: https://wanjun-gu.shinyapps.io/cluster_analysis/
+when: 1584984686.6526
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,86 @@
+---
+title: "high dimensional discriminant analysis"
+author: "chang han"
+date: "4/1/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library("dbscan")
+library("HDclassif")
+```
+
+```{r}
+load(file="rna/cluster_analysis/shiny_data.RData")
+# load(file="shiny_data.RData")
+cdp<-cdp[,-c(2,3,4,5,6,7,8)]
+
+```
+```{r}
+sig_genes<-read.csv("../Find_Significant_Genes/exercise_paired.csv")
+col_order <- c(c("RNAid","Fasting","Exercise","CMS","Hemodilution"),as.character(sig_genes$ENSEMBL))
+#reorder columns according to significnat genes
+cdp<-cdp[,col_order]
+head(cdp)
+```
+
+
+
+```{r}
+#select patients with conditions, pos_condition is positive condition, neg_condition is negative condition
+#lab is label in text
+select_samples<-function(data=cdp,top_genes=100,pos_condition=c(),neg_condition=c() ,lab){
+  sub=data.frame(data[,1:top_genes])
+  for(i in pos_condition){
+    if(length(condition)==1){break}
+    else{sub<-sub[sub[,as.character(i)] == 1,]}
+  }
+  for(i in neg_condition){
+    if(length(condition)==0){break}
+    else{sub<-sub[sub[,as.character(i)] == 0,]}
+  }
+  l=rep(lab,length(sub$RNAid))
+  sub$label<-l
+  return(sub)
+  
+}
+
+```
+
+
+```{r}
+#method that I discard. density based clustering
+
+#data_for_dbscan<-combined[,-c(1,2,3,4,5,51)]
+#kNNdistplot(data_for_dbscan, k = 3)
+#res <- dbscan(data_for_dbscan, eps = 30, minPts = 6)
+#res
+#plot(data_for_dbscan[,c(3,4)], col = res$cluster + 1L, pch = c(16, 17, 18)[as.factor(combined$label)])
+```
+
+
+```{r}
+#select individuals
+cms_hem<-select_samples(top_genes=50,pos_condition =c("CMS","Hemodilution"),lab="CMS+Hem")
+cms_nonhem<-select_samples(top_genes=50,pos_condition =c("CMS"),neg_condition = c("Hemodilution"),lab="CMS+nonHem")
+noncms_nonhem<-select_samples(top_genes=50,neg_condition = c("CMS","Hemodilution"),lab="nonCMS+nonHem")
+dat<-rbind(cms_hem,rbind(cms_nonhem,noncms_nonhem))
+d<-subset(dat, select=-c(label,Fasting,Exercise,Hemodilution,CMS,RNAid))
+head(d)
+```
+
+
+
+```{r}
+high_dim_discriminant_analysis <- hdda(d, as.factor(dat$label), model='all', scaling=TRUE, d_select="bic", graph=TRUE)
+high_dim_discriminant_analysis$kname
+result<- predict(prms1, d, as.factor(dat$label))
+result
+```
+
+
+
+
